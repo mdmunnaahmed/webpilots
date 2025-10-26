@@ -1,5 +1,18 @@
 "user strict";
 
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggler = document.querySelector('.menu-toggler');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (menuToggler && navMenu) {
+    menuToggler.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggler.classList.toggle('active'); // optional: animate toggler too
+    });
+  }
+});
+
+
 $(".professionals-slider").slick({
   dots: false,
   arrows: false,

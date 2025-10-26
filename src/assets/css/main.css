@@ -215,6 +215,7 @@ header .header-wrapper .menu-toggler span {
     opacity: 0;
     visibility: hidden;
     z-index: 999;
+    transition: all 0.3s ease;
   }
   header .header-wrapper .nav-menu.active {
     opacity: 1;
