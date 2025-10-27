@@ -840,3 +840,6 @@ header .header-wrapper .nav-menu ul li a:hover {
 }
 
 /* professionals section end */
+section {
+  scroll-margin-top: 76px;
+}

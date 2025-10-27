@@ -3,14 +3,27 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggler = document.querySelector('.menu-toggler');
   const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
 
   if (menuToggler && navMenu) {
+    // Toggle menu on button click
     menuToggler.addEventListener('click', () => {
       navMenu.classList.toggle('active');
-      menuToggler.classList.toggle('active'); // optional: animate toggler too
+      menuToggler.classList.toggle('active');
     });
+
+    // Close menu when any link is clicked
+    if (navLinks.length) {
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          menuToggler.classList.remove('active');
+        });
+      });
+    }
   }
 });
+
 
 
 $(".professionals-slider").slick({
